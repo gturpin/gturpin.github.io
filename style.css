@@ -12,7 +12,7 @@
 body {
   background-color: var(--lt);
   font-family: "Inter", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 /*
@@ -48,6 +48,10 @@ p {
   font-size: 1.5rem;
   min-width: 5rem;
   text-align: center;
+}
+
+i {
+  color: var(--accent1);
 }
 
 footer > h3,
