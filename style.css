@@ -113,7 +113,8 @@ figcaption {
 
 /* Header */
 .logo {
-  max-width: 100px;
+  max-width: 74px;
+  vertical-align: -1px;
   width: 100%;
   opacity: 0;
   transform: translateY(-200px);
