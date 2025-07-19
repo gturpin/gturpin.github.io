@@ -1,126 +1,178 @@
 * {
-  --dk: #141415;
-  --lt: #f2f2f2;
-  --mid: #d7d4d2;
-  --accent1: #264653;
-  --accent2: #2a9d8f;
-  --accent3: #e9c46a;
-  --accent4: #d4a261;
-  --accent5: #e76f51;
+  --black: #001e1d;
+  --black-rich: #141415;
+  --white: #fffffe;
+  --gray: #e8e4e6;
+  --theme-dark: #004643;
+  --theme-mid: #2a9d8f;
+  --theme-light: #abd1c6;
+  --accent-dark: #e16162;
+  --accent-light: #f9bc60;
 }
 
 body {
-  background-color: var(--lt);
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
-}
-
-/*
-header {
-  background: var(--accent3) url('https://assets.codepen.io/489708/bg-trees.jpeg') no-repeat center;
-  height: 100vh;
-}*/
-
-.logo {
-  max-width: 100px;
-  width: 100%;
+  font-family: Inter, sans-serif;
+    font-size: 20px;
 }
 
 h1 {
+  color: var(--white);
 }
 
 h2 {
-  color: var(--accent1);
+  color: var(--accent-dark);
+  font-size: 1em;
 }
 
 p {
-  color: var(--dk);
-}
-
-.icon > p {
-  color: var(--accent1);
-  font-weight: 600;
-  text-align: center;
-  width: 8rem;
-}
-
-.contact-icon {
-  font-size: 1.5rem;
-  min-width: 5rem;
-  text-align: center;
-}
-
-i {
-  color: var(--accent1);
-}
-
-footer > h3,
-footer > p {
-  color: var(--lt);
+  color: var(--black);
 }
 
 a {
-  border-bottom: 1px solid var(--accent2);
-  color: var(--accent1);
+  border-bottom: 1px solid var(--theme-mid);
+  color: var(--black);
   font-weight: 600;
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--accent2);
+  color: var(--theme-mid);
   border: 0;
 }
 
 a.reversed {
-  border-bottom: 1px solid var(--accent2);
-  color: var(--lt);
+  border-bottom: 1px solid var(--theme-mid);
+  color: var(--white);
 }
 
 a:hover.reversed {
-  color: var(--accent2);
+  color: var(--theme-mid);
   border: 0;
 }
 
-.color-dk {
-  color: var(--dk);
+i {
+  color: var(--theme-dark);
 }
 
-.color-lt {
-  color: var(--lt);
+figure {
+  font-family: Georgia, serif;
 }
 
-.bg-dk {
-  background-color: var(--dk);
+figcaption {
+  color: var(--theme-light);
+  text-align: right;
 }
 
-.bg-lt {
-  background-color: var(--lt);
+.bg-black {
+  background: var(--black);
 }
 
-.bg-mid {
-  background-color: var(--mid);
+.bg-black-rich {
+  background: var(--black-rich);
 }
 
-.bg-accent {
-  background-color: var(--accent1);
+.bg-white {
+  background: var(--white);
 }
 
-.color-accent1 {
-  color: var(--accent1);
+.bg-gray {
+  background: var(--gray);
 }
 
-.color-accent2 {
-  color: var(--accent2);
+.bg-theme-dark {
+    background: var(--theme-dark);
 }
 
-.color-accent3 {
-  color: var(--accent3);
+.bg-theme-light {
+    background: var(--theme-light);
 }
 
-.color-accent4 {
-  color: var(--accent4);
+.text-black {
+    color: var(--black);
 }
 
-.color-accent5 {
-  color: var(--accent5);
+.text-white {
+  color: var(--white);
+}
+
+.text-theme-dark {
+    color: var(--theme-dark);
+}
+
+.text-theme-light {
+    color: var(--theme-light);
+}
+
+.text-accent-dark {
+  color: var(--accent-dark);  
+}
+
+.text-accent-light {
+  color: var(--accent-light);
+}
+
+/* Header */
+.logo {
+  max-width: 100px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(-200px);
+  animation: fadeInUp 0.7s ease-out forwards;
+  animation-delay: 0.75s;
+}
+
+.name {
+  animation: fadeInUp 0.8s ease-out forwards;
+  font-size: 6rem;
+  line-height: 0.75;
+  opacity: 0;
+  transform: translateY(0);
+}
+
+.firstname {
+  animation-delay: 0.4s;
+  font-weight: 200;
+  letter-spacing: -8px;
+}
+
+.lastname {
+  animation-delay: 0.6s;
+  color: var(--theme-light);
+  font-weight: 800;
+  letter-spacing: -4px;
+  text-transform: uppercase;
+}
+
+.lead {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.8s;
+  font-size: 1.375em;
+  opacity: 0;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* What */
+div.icon, div.icon * {
+  background: var(--theme-dark);
+  border: 0;
+  color: var(--theme-light);
+  text-align: center;
+}
+
+div.icon:hover, div.icon:hover * {
+  background: var(--theme-light);
+  color: var(--theme-dark);
+}
+
+/* Footer */
+
+footer > p {
+  color: var(--white);
 }
